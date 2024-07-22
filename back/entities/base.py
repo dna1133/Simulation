@@ -6,14 +6,10 @@ from back.values.health import HealthValue
 
 @dataclass
 class BaseEntity(ABC):
-    axis_x: int
-    axis_y: int
-    static: bool
-    health: HealthValue
-    target_in: str | None
-    target_out: str | None
+
     speed: int
     attack_rate: int
+    health: HealthValue
 
     @abstractmethod
     def make_move(self) -> None: ...
@@ -23,3 +19,13 @@ class BaseEntity(ABC):
 
     @abstractmethod
     def is_static(self) -> bool: ...
+
+    @property
+    @abstractmethod
+    def health(self) -> int:
+        return self.health.as_generic_type()
+
+    @health.setter
+    @abstractmethod
+    def health(self, damage: int) -> None:
+        self.health.value = self.health.as_generic_type() - damage

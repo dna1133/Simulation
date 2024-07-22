@@ -1,9 +1,9 @@
 # Exception settins
-APPLICATION_EXCEPTION = r"Извините, в приложении возникла какая-то ошибка."
-SETTINGS_EXCEPTION = r"Произошла ошибка, проверьте файл конфигурации."
+APPLICATION_EXCEPTION_MESSAGE = r"Извините, в приложении возникла какая-то ошибка."
+SETTINGS_EXCEPTION_MESSAGE = r"Произошла ошибка, проверьте файл конфигурации."
 
 # Game settings
-ENTITIES = {
+HEALTH = {
     "Grass": 20,
     "Rock": 10,
     "Tree": 10,
