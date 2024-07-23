@@ -1,12 +1,12 @@
 # import pytest
 # from faker import Faker
 
-from back.domain.creatures.herbivore import Herbivore
-from back.domain.creatures.predator import Predator
-from back.domain.landscape.grass import Grass
-from back.domain.landscape.rock import Rock
-from back.domain.landscape.tree import Tree
-from back.settings import *
+from simulation.back.domain.creatures.herbivore import Herbivore
+from simulation.back.domain.creatures.predator import Predator
+from simulation.back.domain.landscape.grass import Grass
+from simulation.back.domain.landscape.rock import Rock
+from simulation.back.domain.landscape.tree import Tree
+from simulation.back.settings import *
 
 
 def test_rock_create_success():

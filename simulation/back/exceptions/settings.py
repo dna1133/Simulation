@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from back.exceptions.base import ApplicationException
-from back.settings import SETTINGS_EXCEPTION_MESSAGE
+from simulation.back.exceptions.base import ApplicationException
+from simulation.back.settings import SETTINGS_EXCEPTION_MESSAGE
 
 
 @dataclass

@@ -1,10 +1,11 @@
+from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from back.domain.creatures.creature import Creature
+from simulation.back.domain.landscape.entity import Entity
 
 
 @dataclass
-class Predator(Creature):
+class Creature(Entity, ABC):
     type: str
     is_active: bool
     transparensy: bool
@@ -15,9 +16,11 @@ class Predator(Creature):
     speed: int
     attack_rate: int
 
-    def destroy(self) -> None:
-        self.is_active = False
+    @abstractmethod
+    def destroy(self): ...
 
+    @abstractmethod
     def move(self): ...
 
+    @abstractmethod
     def attack(self): ...

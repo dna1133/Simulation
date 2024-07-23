@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from back.domain.landscape.entity import Entity
+from simulation.back.domain.landscape.entity import Entity
 
 
 @dataclass
-class Grass(Entity):
+class Tree(Entity):
     type: str
     is_active: bool
     transparensy: bool
@@ -13,5 +13,4 @@ class Grass(Entity):
     health: int
     image: str
 
-    def destroy(self) -> None:
-        self.is_active = False
+    def destroy(self): ...

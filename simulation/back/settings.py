@@ -1,9 +1,18 @@
 # Exception settins
 APPLICATION_EXCEPTION_MESSAGE = r"Извините, в приложении возникла какая-то ошибка."
 SETTINGS_EXCEPTION_MESSAGE = r"Произошла ошибка, проверьте файл конфигурации."
+SERVICE_EXCEPTION_MESSAGE = r"Такого класса не существует"
 
-# Game settings
-ENTITIES = ["Grass", "Rock", "Tree", "Herbivore", "Predator"]
+# Entity settings
+LANDSCAPE = [
+    "Grass",
+    "Rock",
+    "Tree",
+]
+CREATURES = [
+    "Herbivore",
+    "Predator",
+]
 HEALTH = {
     "Grass": 20,
     "Rock": 10,
@@ -39,3 +48,14 @@ LAYERS = {
     3: "Herbivore",
     4: "Predator",
 }
+IMAGE = {
+    "Grass": "G",
+    "Rock": "R",
+    "Tree": "T",
+    "Herbivore": "H",
+    "Predator": "P",
+}
+
+# Game settings
+WIDTH = 640
+HEIGHT = 480

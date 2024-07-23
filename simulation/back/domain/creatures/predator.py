@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from back.domain.creatures.creature import Creature
+from simulation.back.domain.creatures.creature import Creature
 
 
 @dataclass
-class Herbivore(Creature):
+class Predator(Creature):
     type: str
     is_active: bool
     transparensy: bool
