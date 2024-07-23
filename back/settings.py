@@ -3,6 +3,7 @@ APPLICATION_EXCEPTION_MESSAGE = r"Извините, в приложении во
 SETTINGS_EXCEPTION_MESSAGE = r"Произошла ошибка, проверьте файл конфигурации."
 
 # Game settings
+ENTITIES = ["Grass", "Rock", "Tree", "Herbivore", "Predator"]
 HEALTH = {
     "Grass": 20,
     "Rock": 10,
@@ -23,4 +24,18 @@ ATTACK_RATE = {
     "Tree": 0,
     "Herbivore": 0,
     "Predator": 15,
+}
+TRANSPARENSY = {
+    "Grass": False,
+    "Rock": False,
+    "Tree": False,
+    "Herbivore": False,
+    "Predator": False,
+}
+LAYERS = {
+    0: "Grass",
+    1: "Rock",
+    2: "Tree",
+    3: "Herbivore",
+    4: "Predator",
 }
