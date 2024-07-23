@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from back.settings import APPLICATION_EXCEPTION_MESSAGE
+from simulation.back.settings import APPLICATION_EXCEPTION_MESSAGE
 
 
 @dataclass

@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from back.domain.landscape.entity import Entity
+from simulation.back.domain.landscape.entity import Entity
 
 
 @dataclass
-class Tree(Entity):
+class Rock(Entity):
     type: str
     is_active: bool
     transparensy: bool
