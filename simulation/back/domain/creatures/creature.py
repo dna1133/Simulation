@@ -6,15 +6,10 @@ from simulation.back.domain.landscape.entity import Entity
 
 @dataclass
 class Creature(Entity, ABC):
-    type: str
-    is_active: bool
-    transparensy: bool
-    x_pos: int
-    y_pos: int
-    health: int
-    image: str
     speed: int
     attack_rate: int
+    target: str
+    direction: str
 
     @abstractmethod
     def destroy(self): ...

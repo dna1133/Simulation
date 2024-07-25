@@ -55,6 +55,22 @@ IMAGE = {
     "Herbivore": "H",
     "Predator": "P",
 }
+TARGET = {
+    "Herbivore": "Grass",
+    "Predator": "Herbivore",
+}
+
+# Directions
+DIR_LIST = [
+    "up_left",
+    "up",
+    "up_right",
+    "left",
+    "right",
+    "down_left",
+    "down",
+    "down_right",
+]
 
 # Game settings
 WIDTH = 640

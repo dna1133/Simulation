@@ -1,3 +1,0 @@
-class RandomAxisGenerator:
-    @classmethod
-    def genearate_axis(cls, axis_x: int, axis_y: int, elemets_dict: dict) -> dict: ...

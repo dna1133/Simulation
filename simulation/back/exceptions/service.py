@@ -4,7 +4,7 @@ from simulation.back.exceptions.base import ApplicationException
 from simulation.back.settings import SERVICE_EXCEPTION_MESSAGE
 
 
-@dataclass
+@dataclass(eq=False)
 class ServiceException(ApplicationException):
     @property
     def message(self):

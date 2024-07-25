@@ -24,7 +24,7 @@ def test_rock_create_success():
 
 
 def test_tree_create_success():
-    rock = Tree(
+    tree = Tree(
         type="Tree",
         is_active=True,
         transparensy=True,
@@ -33,12 +33,12 @@ def test_tree_create_success():
         health=13,
         image="R",
     )
-    assert rock.type == "Tree"
-    assert rock.health == 13
+    assert tree.image == "R"
+    assert tree.transparensy == True
 
 
 def test_grass_create_success():
-    rock = Grass(
+    grass = Grass(
         type="Grass",
         is_active=True,
         transparensy=True,
@@ -47,12 +47,12 @@ def test_grass_create_success():
         health=11,
         image="R",
     )
-    assert rock.type == "Grass"
-    assert rock.x_pos == 1
+    assert grass.y_pos == 1
+    assert grass.x_pos == 1
 
 
 def test_herbivore_create_success():
-    rock = Herbivore(
+    herbivore = Herbivore(
         type="Herbivore",
         is_active=True,
         transparensy=True,
@@ -62,13 +62,15 @@ def test_herbivore_create_success():
         image="R",
         speed=3,
         attack_rate=2,
+        target="Grass",
+        direction="up",
     )
-    assert rock.type == "Herbivore"
-    assert rock.attack_rate == 2
+    assert herbivore.type == "Herbivore"
+    assert herbivore.speed == 3
 
 
 def test_predator_create_success():
-    rock = Predator(
+    predator = Predator(
         type="Predator",
         is_active=True,
         transparensy=False,
@@ -78,6 +80,8 @@ def test_predator_create_success():
         image="R",
         speed=3,
         attack_rate=5,
+        target="Herbivore",
+        direction="up",
     )
-    assert rock.type == "Predator"
-    assert rock.attack_rate == 5
+    assert predator.type == "Predator"
+    assert predator.attack_rate == 5

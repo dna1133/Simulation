@@ -5,15 +5,6 @@ from simulation.back.domain.creatures.creature import Creature
 
 @dataclass
 class Herbivore(Creature):
-    type: str
-    is_active: bool
-    transparensy: bool
-    x_pos: int
-    y_pos: int
-    health: int
-    image: str
-    speed: int
-    attack_rate: int
 
     def destroy(self) -> None:
         self.is_active = False

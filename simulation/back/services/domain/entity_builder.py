@@ -1,4 +1,5 @@
 from typing import Callable, Hashable
+from simulation.back.domain.creatures.creature import Creature
 from simulation.back.domain.creatures.herbivore import Herbivore
 from simulation.back.domain.creatures.predator import Predator
 from simulation.back.domain.landscape.entity import Entity
@@ -6,6 +7,7 @@ from simulation.back.domain.landscape.grass import Grass
 from simulation.back.domain.landscape.rock import Rock
 from simulation.back.domain.landscape.tree import Tree
 from simulation.back.exceptions.service import ServiceException
+from simulation.back.services.domain.direction_builder import DirectionBuilder
 from simulation.back.settings import (
     ATTACK_RATE,
     CREATURES,
@@ -13,11 +15,12 @@ from simulation.back.settings import (
     IMAGE,
     LANDSCAPE,
     SPEED,
+    TARGET,
     TRANSPARENSY,
 )
 
 
-class Factory(Entity):
+class EntityBuilder(Creature, Entity):
     @staticmethod
     def get(class_name: Hashable, position: tuple[int, int]) -> Entity:
         classes: dict[Hashable, Callable[..., Entity]] = {
@@ -52,16 +55,18 @@ class Factory(Entity):
                     image=IMAGE[class_name],
                     speed=SPEED[class_name],
                     attack_rate=ATTACK_RATE[class_name],
+                    target=TARGET[class_name],
+                    direction=DirectionBuilder.create_direction(),
                 )
 
         raise ServiceException
 
 
-def main():
-    test_class = Factory.get("Predator", (1, 1))
-    print(test_class.type)
-    print(test_class.x_pos)
+# def main():
+#     test_class = EntityBuilder.get("Predator", (1, 1))
+#     print(test_class.type)
+#     print(test_class.x_pos)
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
